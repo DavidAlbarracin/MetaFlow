@@ -1,0 +1,24 @@
+# MetaFlow gitignore
+
+node_modules/
+dist/
+dist-ssr/
+
+# SQLite databases
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Local settings / secrets
+.env
+.env.*
+.env.local
+
+# User Uploads
+backend/uploads/
+uploads/
+
+# Log files
+*.log
+logs/
