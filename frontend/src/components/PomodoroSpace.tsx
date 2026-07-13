@@ -246,7 +246,7 @@ export const PomodoroSpace: React.FC<PomodoroSpaceProps> = ({
               boxShadow: 'var(--shadow-glow)' 
             }}
           >
-            {isRunning ? <Pause size={24} fill="#fff" /> : <Play size={24} fill="#fff" style={{ marginLeft: '4px' }} />}
+            {isRunning ? <Pause size={24} fill="var(--on-primary, #ffffff)" /> : <Play size={24} fill="var(--on-primary, #ffffff)" style={{ marginLeft: '4px' }} />}
           </button>
 
           <button 

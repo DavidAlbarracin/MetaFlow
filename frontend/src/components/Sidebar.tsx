@@ -101,7 +101,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, profi
                 border: 'none',
                 borderRadius: 'var(--radius-sm)',
                 background: isActive ? 'var(--primary)' : 'transparent',
-                color: isActive ? '#ffffff' : 'var(--text-muted)',
+                color: isActive ? 'var(--on-primary, #ffffff)' : 'var(--text-muted)',
                 cursor: 'pointer',
                 fontSize: '14px',
                 fontWeight: isActive ? 600 : 500,
@@ -122,7 +122,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, profi
                 }
               }}
             >
-              <Icon size={18} style={{ color: isActive ? '#ffffff' : 'inherit' }} />
+              <Icon size={18} style={{ color: isActive ? 'var(--on-primary, #ffffff)' : 'inherit' }} />
               <span>{item.label}</span>
             </button>
           );

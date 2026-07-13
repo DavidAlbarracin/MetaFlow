@@ -210,7 +210,7 @@ export const NotesSpace: React.FC<NotesSpaceProps> = ({ notes, contacts, refresh
                 border: 'none',
                 cursor: 'pointer',
                 background: selectedCategory === cat.id ? 'var(--primary)' : 'rgba(255,255,255,0.03)',
-                color: selectedCategory === cat.id ? '#fff' : 'var(--text-muted)',
+                color: selectedCategory === cat.id ? 'var(--on-primary, #ffffff)' : 'var(--text-muted)',
                 fontWeight: 600,
                 transition: 'var(--transition-smooth)'
               }}

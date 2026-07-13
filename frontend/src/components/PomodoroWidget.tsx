@@ -85,7 +85,7 @@ export const PomodoroWidget: React.FC<PomodoroWidgetProps> = ({
                   textTransform: 'uppercase',
                   cursor: 'pointer',
                   background: mode === m ? 'var(--primary)' : 'rgba(255, 255, 255, 0.03)',
-                  color: mode === m ? '#fff' : 'var(--text-muted)',
+                  color: mode === m ? 'var(--on-primary, #ffffff)' : 'var(--text-muted)',
                   transition: 'var(--transition-smooth)'
                 }}
               >
@@ -156,7 +156,7 @@ export const PomodoroWidget: React.FC<PomodoroWidgetProps> = ({
                 borderRadius: '50%',
                 border: 'none',
                 background: 'var(--primary)',
-                color: '#fff',
+                color: 'var(--on-primary, #ffffff)',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
@@ -165,7 +165,7 @@ export const PomodoroWidget: React.FC<PomodoroWidgetProps> = ({
                 transition: 'var(--transition-bounce)'
               }}
             >
-              {isRunning ? <Pause size={20} fill="#fff" /> : <Play size={20} fill="#fff" style={{ marginLeft: '4px' }} />}
+              {isRunning ? <Pause size={20} fill="var(--on-primary, #ffffff)" /> : <Play size={20} fill="var(--on-primary, #ffffff)" style={{ marginLeft: '4px' }} />}
             </button>
 
             {/* Audio volume toggle */}

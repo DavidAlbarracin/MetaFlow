@@ -305,11 +305,11 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                   }}
                   onMouseEnter={() => { if (!isTip) setSelectedIndex(idx); }}
                 >
-                  <Icon size={16} style={{ color: isSelected ? '#fff' : 'var(--accent)', flexShrink: 0 }} />
+                  <Icon size={16} style={{ color: isSelected ? 'var(--on-primary, #ffffff)' : 'var(--accent)', flexShrink: 0 }} />
                   <span style={{
                     fontSize: '13px',
                     fontWeight: isSelected ? 600 : 500,
-                    color: isSelected ? '#fff' : isTip ? 'var(--text-dark)' : 'var(--text-main)',
+                    color: isSelected ? 'var(--on-primary, #ffffff)' : isTip ? 'var(--text-dark)' : 'var(--text-main)',
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap'

@@ -96,6 +96,7 @@
   --text-dark: #9ca3af;
   --input-bg: rgba(255, 255, 255, 0.03);
   --input-border: rgba(255, 255, 255, 0.05);
+  --on-primary: #111217;
 }
 
 /* 2. ESTILOS GENERALES Y LAYOUT */
@@ -231,7 +232,7 @@ input:focus, textarea:focus, select:focus {
 /* Botones Premium */
 .btn-primary {
   background: var(--primary);
-  color: #fff;
+  color: var(--on-primary, #ffffff);
   border: none;
   font-weight: 600;
   border-radius: var(--radius-sm);
@@ -291,7 +292,7 @@ input:focus, textarea:focus, select:focus {
 .custom-checkbox.checked {
   border-color: var(--primary);
   background: var(--primary);
-  color: #fff;
+  color: var(--on-primary, #ffffff);
   transform: scale(1.05);
 }
 

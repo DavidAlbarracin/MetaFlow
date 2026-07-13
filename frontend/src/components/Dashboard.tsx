@@ -494,7 +494,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                   textTransform: 'uppercase',
                   cursor: 'pointer',
                   background: pomodoroMode === m ? 'var(--primary)' : 'rgba(255, 255, 255, 0.03)',
-                  color: pomodoroMode === m ? '#fff' : 'var(--text-muted)'
+                  color: pomodoroMode === m ? 'var(--on-primary, #ffffff)' : 'var(--text-muted)'
                 }}
               >
                 {m === 'focus' ? 'Enfoque' : m === 'short' ? 'Corto' : 'Largo'}
@@ -531,7 +531,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 borderRadius: '50%',
                 border: 'none',
                 background: 'var(--primary)',
-                color: '#fff',
+                color: 'var(--on-primary, #ffffff)',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
@@ -539,7 +539,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 boxShadow: 'var(--shadow-glow)'
               }}
             >
-              {pomodoroIsRunning ? <Pause size={18} fill="#fff" /> : <Play size={18} fill="#fff" style={{ marginLeft: '2px' }} />}
+              {pomodoroIsRunning ? <Pause size={18} fill="var(--on-primary, #ffffff)" /> : <Play size={18} fill="var(--on-primary, #ffffff)" style={{ marginLeft: '2px' }} />}
             </button>
 
             <button 
