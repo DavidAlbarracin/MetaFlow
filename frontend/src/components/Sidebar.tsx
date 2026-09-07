@@ -17,7 +17,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, profi
     { id: 'habits', label: 'Hábitos', icon: Flame },
     { id: 'pomodoro', label: 'Enfoque Pomodoro', icon: Clock },
     { id: 'notes', label: 'Notas y Wiki', icon: BookOpen },
-    { id: 'crm', label: 'CRM Personal', icon: Users },
+    { id: 'crm', label: 'Keep in Touch', icon: Users },
     { id: 'settings', label: 'Ajustes', icon: Settings },
   ];
 

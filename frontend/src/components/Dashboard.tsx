@@ -651,11 +651,11 @@ export const Dashboard: React.FC<DashboardProps> = ({
       {/* 5. SECOND ROW: CRM KEEP IN TOUCH & RECENT NOTES */}
       <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '20px', marginTop: '10px' }}>
         
-        {/* CRM Recordatorios Widget */}
+        {/* Keep in Touch Recordatorios Widget */}
         <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '1px solid var(--panel-border)', paddingBottom: '14px' }}>
             <Users size={18} style={{ color: 'var(--primary)' }} />
-            <h2 style={{ fontSize: '18px', fontWeight: 600 }}>CRM Personal: Recordatorios de Conexión</h2>
+            <h2 style={{ fontSize: '18px', fontWeight: 600 }}>Keep in Touch: Recordatorios de Conexión</h2>
           </div>
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '200px', overflowY: 'auto' }}>
@@ -681,7 +681,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 return (
                   <div style={{ padding: '16px', textAlign: 'center', color: 'var(--text-dark)', fontSize: '12px' }}>
                     <CheckCircle size={20} style={{ color: '#34d399', marginBottom: '6px', display: 'block', margin: '0 auto 6px' }} />
-                    ¡Al día con tus contactos comerciales!
+                    ¡Al día con todos tus contactos!
                   </div>
                 );
               }

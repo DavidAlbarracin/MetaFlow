@@ -88,7 +88,7 @@ export const CRMSpace: React.FC<CRMSpaceProps> = ({
   const handleDeleteContact = async (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
     const confirmed = await showConfirm(
-      '¿Eliminar este cliente?',
+      '¿Eliminar este contacto?',
       'Se borrarán sus datos y se desvincularán proyectos y notas asociados.'
     );
     if (confirmed) {
@@ -180,17 +180,17 @@ export const CRMSpace: React.FC<CRMSpaceProps> = ({
       {/* 1. HEADER & TAB CONTROL */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
-          <h1 style={{ fontSize: '28px', fontWeight: 700 }}>Contactos y Conexiones</h1>
+          <h1 style={{ fontSize: '28px', fontWeight: 700 }}>Keep in Touch</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '14px', marginTop: '4px' }}>
-            Gestiona tu directorio de clientes y recordatorios automáticos de comunicación ("Keep in Touch").
+            Gestiona tus contactos profesionales y recordatorios de comunicación para no dejar enfriar tus relaciones.
           </p>
         </div>
 
         {/* Tab Switcher */}
         <div style={{ display: 'flex', background: 'rgba(0,0,0,0.2)', padding: '4px', borderRadius: 'var(--radius-md)', border: '1px solid var(--panel-border)' }}>
           {[
-            { id: 'contacts', label: 'Directorio de Clientes' },
-            { id: 'reminders', label: 'Keep in Touch' }
+            { id: 'contacts', label: 'Contactos' },
+            { id: 'reminders', label: 'Recordatorios' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -218,7 +218,7 @@ export const CRMSpace: React.FC<CRMSpaceProps> = ({
           {/* Left panel: Contacts Grid */}
           <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: 600 }}>Directorio Comercial</h3>
+              <h3 style={{ fontSize: '18px', fontWeight: 600 }}>Directorio de Contactos</h3>
               <button onClick={() => setShowContactModal(true)} className="btn-primary" style={{ padding: '8px 16px', fontSize: '13px' }}>
                 <Plus size={16} /> Agregar Contacto
               </button>
@@ -440,7 +440,7 @@ export const CRMSpace: React.FC<CRMSpaceProps> = ({
               <AlertTriangle size={18} style={{ color: '#fb923c' }} /> Recordatorios de Relación
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '13px', marginTop: '2px' }}>
-              Los siguientes clientes han superado tu límite de contacto establecido. Mantén vivas tus relaciones de negocio.
+              Los siguientes contactos han superado tu límite establecido. Mantén vivas tus relaciones profesionales.
             </p>
           </div>
 
@@ -448,7 +448,7 @@ export const CRMSpace: React.FC<CRMSpaceProps> = ({
             {contactsToReconnect.length === 0 ? (
               <div style={{ gridColumn: 'span 2', padding: '40px', textAlign: 'center', color: 'var(--text-dark)' }}>
                 <CheckCircle size={32} style={{ color: '#34d399', marginBottom: '10px' }} />
-                <p style={{ fontSize: '14px', fontWeight: 600 }}>¡Excelente trabajo! Estás al día con todos tus contactos comerciales.</p>
+                <p style={{ fontSize: '14px', fontWeight: 600 }}>¡Excelente trabajo! Estás al día con todos tus contactos.</p>
               </div>
             ) : (
               contactsToReconnect.map((c) => {

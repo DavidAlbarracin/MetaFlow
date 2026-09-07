@@ -314,7 +314,7 @@ export const NotesSpace: React.FC<NotesSpaceProps> = ({ notes, contacts, refresh
               {/* Linked contact */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <User size={14} style={{ color: 'var(--accent)' }} />
-                <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>Cliente CRM:</span>
+                <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>Contacto:</span>
                 <select 
                   value={contactId || ''} 
                   onChange={(e) => setContactId(e.target.value || null)}
